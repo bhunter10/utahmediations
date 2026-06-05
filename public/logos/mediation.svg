@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Mediation certificate">
+  <circle cx="60" cy="60" r="56" fill="#fbfaf6" stroke="#17324d" stroke-width="3"/>
+  <path fill="none" stroke="#17324d" stroke-linecap="round" stroke-width="4" d="M60 28v44"/>
+  <path fill="none" stroke="#17324d" stroke-linecap="round" stroke-width="4" d="M36 40h48"/>
+  <path fill="#b28a4a" stroke="#17324d" stroke-width="2" d="M28 48h24l-12 18zM68 48h24l-12 18z"/>
+  <path fill="none" stroke="#17324d" stroke-linecap="round" stroke-width="3" d="M34 84h52"/>
+</svg>

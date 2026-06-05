@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Utah State Bar">
+  <circle cx="60" cy="60" r="56" fill="none" stroke="#17324d" stroke-width="4"/>
+  <path fill="#17324d" d="M60 24v72M36 42h48M42 42v36M78 42v36M30 96h60"/>
+  <circle cx="60" cy="30" r="6" fill="#17324d"/>
+  <text x="60" y="112" text-anchor="middle" fill="#17324d" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="800">UTAH BAR</text>
+</svg>
