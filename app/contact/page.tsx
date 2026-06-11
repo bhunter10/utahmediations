@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <SiteShell>
-      <section className="page-hero compact-hero">
+      <section className="page-hero compact-hero contact-hero">
         <p className="eyebrow">Contact</p>
         <h1>Get in Touch</h1>
         <p>

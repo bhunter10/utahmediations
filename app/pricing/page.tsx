@@ -73,7 +73,7 @@ export default function PricingPage() {
   return (
     <SiteShell>
       <div className="pricing-page">
-        <section className="page-hero compact-hero">
+        <section className="page-hero compact-hero pricing-hero">
           <p className="eyebrow">Pricing</p>
           <h1>Rates and Details.</h1>
           <p>

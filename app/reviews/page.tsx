@@ -90,7 +90,7 @@ const reviews = [
 export default function ReviewsPage() {
   return (
     <SiteShell>
-      <section className="page-hero compact-hero">
+      <section className="page-hero compact-hero reviews-hero">
         <p className="eyebrow">Reviews</p>
         <h1>Reviews for Dave Hunter.</h1>
         <p>
