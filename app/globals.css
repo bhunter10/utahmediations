@@ -2257,7 +2257,7 @@ dd {
 
   .about-dave-portrait {
     justify-content: center;
-    min-height: 340px;
+    min-height: 360px;
     overflow: hidden;
   }
 
@@ -2272,7 +2272,7 @@ dd {
   .about-dave-portrait img {
     max-height: 390px;
     object-position: center bottom;
-    transform: translateX(8px) translateY(-8px);
+    transform: translateX(8px) translateY(4px);
     width: min(100%, 330px);
   }
 
@@ -2482,12 +2482,12 @@ dd {
   }
 
   .about-dave-portrait {
-    min-height: 300px;
+    min-height: 320px;
   }
 
   .about-dave-portrait img {
     max-height: 340px;
-    transform: translateX(4px) translateY(-6px);
+    transform: translateX(4px) translateY(4px);
     width: min(100%, 290px);
   }
 
