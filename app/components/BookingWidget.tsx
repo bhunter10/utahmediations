@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 type Booking = {
   id: string;
@@ -253,6 +253,7 @@ function getIntakeNotes(form: FormData) {
 }
 
 export default function BookingWidget() {
+  const availableTimesRef = useRef<HTMLDivElement>(null);
   const todayValue = useMemo(() => toDateInputValue(new Date()), []);
   const minMonth = useMemo(() => startOfMonth(new Date()), []);
   const maxMonth = useMemo(() => {
@@ -288,6 +289,15 @@ export default function BookingWidget() {
   function selectDate(value: string) {
     setSelectedDate(value);
     setSelectedTime(availableTimes[0]);
+
+    if (window.matchMedia("(max-width: 900px)").matches) {
+      window.requestAnimationFrame(() => {
+        availableTimesRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
   }
 
   useEffect(() => {
@@ -424,7 +434,7 @@ export default function BookingWidget() {
             </div>
           </div>
 
-          <div className="available-times">
+          <div className="available-times" ref={availableTimesRef}>
             {showAvailableTimes ? (
               <>
                 <h4>Available Times</h4>

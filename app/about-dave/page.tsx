@@ -128,10 +128,6 @@ export default function AboutDavePage() {
             resident of Utah Valley for almost 40 years and is closely tied to
             serving those in his community.
           </p>
-          <p>
-            Contact Dave directly at{" "}
-            <a href="mailto:dave@utahmediations.com">dave@utahmediations.com</a>.
-          </p>
         </div>
       </section>
 

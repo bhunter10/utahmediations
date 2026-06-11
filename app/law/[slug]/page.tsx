@@ -53,10 +53,6 @@ export default async function LawPostPage({
 
   return (
     <SiteShell>
-      <section className="page-hero compact-hero">
-        <p className="eyebrow">Law Blog</p>
-      </section>
-
       <section className="law-detail-section">
         <article className="law-detail-card">
           <div className="law-detail-toolbar">

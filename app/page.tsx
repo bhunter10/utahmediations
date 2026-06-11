@@ -1,4 +1,11 @@
 import type { Metadata } from "next";
+import {
+  FaCalendarDays,
+  FaFileSignature,
+  FaFolderOpen,
+  FaHandshake,
+} from "react-icons/fa6";
+import type { IconType } from "react-icons";
 import BookingWidget from "./components/BookingWidget";
 import { MiniTestimonials, SiteShell } from "./components/SiteChrome";
 
@@ -16,11 +23,23 @@ const credentials = [
 ];
 
 const process = [
-  ["Schedule", "Choose a time and provide basic case details."],
-  ["Prepare", "Gather financials, pleadings, parenting plans, and proposals."],
-  ["Mediate", "Work toward practical settlement with structured guidance."],
-  ["Sign", "Finalize terms with remote signing when appropriate."],
+  ["schedule", "Schedule", "Choose a time and provide basic case details."],
+  ["prepare", "Prepare", "Gather financials, pleadings, parenting plans, and proposals."],
+  ["mediate", "Mediate", "Work toward practical settlement with structured guidance."],
+  ["sign", "Sign", "Finalize terms with remote signing when appropriate."],
 ];
+
+const processIcons: Record<string, IconType> = {
+  schedule: FaCalendarDays,
+  prepare: FaFolderOpen,
+  mediate: FaHandshake,
+  sign: FaFileSignature,
+};
+
+function ProcessIcon({ name }: { name: string }) {
+  const Icon = processIcons[name] ?? FaCalendarDays;
+  return <Icon aria-hidden="true" className={`process-icon process-icon-${name}`} />;
+}
 
 function TrustIcon({ name }: { name: string }) {
   if (name === "family") {
@@ -120,9 +139,12 @@ export default function Home() {
           <h2>Simple steps, clearly presented.</h2>
         </div>
         <div className="process-grid">
-          {process.map(([title, text], index) => (
+          {process.map(([icon, title, text], index) => (
             <article className="process-card" key={title}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div className="process-card-top">
+                <span>Step {index + 1}</span>
+                <ProcessIcon name={icon} />
+              </div>
               <h3>{title}</h3>
               <p>{text}</p>
             </article>

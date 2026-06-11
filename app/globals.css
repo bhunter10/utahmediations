@@ -635,15 +635,74 @@ h3 {
 }
 
 .process-card {
-  min-height: 200px;
-  padding: 28px;
+  display: grid;
+  gap: 14px;
+  min-height: 238px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
 }
 
-.process-card span {
-  color: var(--gold);
-  display: block;
+.process-card::before {
+  background: linear-gradient(90deg, var(--gold), rgba(178, 138, 74, 0.28));
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.process-card-top {
+  align-items: center;
+  background: #fbfaf6;
+  border-bottom: 1px solid rgba(228, 222, 209, 0.8);
+  display: flex;
+  justify-content: space-between;
+  min-height: 104px;
+  padding: 26px 24px 22px;
+}
+
+.process-card-top span {
+  background: rgba(178, 138, 74, 0.12);
+  border: 1px solid rgba(178, 138, 74, 0.24);
+  border-radius: 999px;
+  color: #7d684a;
+  display: inline-flex;
+  font-size: 0.76rem;
   font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 7px 11px;
+  text-transform: uppercase;
+}
+
+.process-card h3,
+.process-card p {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.process-card h3 {
+  color: var(--navy);
+  font-size: 1.08rem;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.process-card p {
   margin-bottom: 26px;
+}
+
+.process-icon {
+  color: var(--navy);
+  height: 42px;
+  width: 42px;
+}
+
+.process-icon-schedule,
+.process-icon-prepare {
+  height: 34px;
+  width: 34px;
 }
 
 .feature-section {
@@ -1177,6 +1236,22 @@ h3 {
   padding-top: 0;
 }
 
+@media (min-width: 901px) {
+  .pricing-page .fees-section,
+  .pricing-page .split-section,
+  .pricing-page .feature-section,
+  .pricing-page .documents-section,
+  .pricing-page .mini-testimonials,
+  .pricing-page .contact-band {
+    padding-bottom: 64px;
+    padding-top: 64px;
+  }
+
+  .pricing-page .page-hero + .fees-section {
+    padding-top: 76px;
+  }
+}
+
 .booking-shell {
   align-items: stretch;
   background: linear-gradient(135deg, #031d2e, #c3b298);
@@ -1503,8 +1578,12 @@ textarea {
   color: white;
   cursor: pointer;
   font-weight: 900;
+  justify-self: center;
   min-height: 52px;
   margin-top: 18px;
+  min-width: 132px;
+  padding: 0 24px;
+  width: fit-content;
 }
 
 .booking-details {
@@ -2055,11 +2134,15 @@ dd {
 
 @media (max-width: 900px) {
   .site-header {
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
     padding: 16px 24px;
   }
 
   nav {
+    display: none;
+  }
+
+  .site-header > .nav-button {
     display: none;
   }
 
@@ -2253,6 +2336,11 @@ dd {
     padding-top: 24px;
   }
 
+  .continue-button {
+    justify-self: stretch;
+    width: 100%;
+  }
+
   .footer-trust-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2266,11 +2354,6 @@ dd {
 @media (max-width: 520px) {
   .brand {
     font-size: 1.16rem;
-  }
-
-  .nav-button {
-    min-height: 42px;
-    padding: 0 16px;
   }
 
   .hero {
@@ -2402,6 +2485,28 @@ dd {
 
   .process-card {
     min-height: 170px;
+  }
+
+  .process-card-top {
+    min-height: 92px;
+    padding: 22px 22px 16px;
+  }
+
+  .process-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .process-icon-schedule,
+  .process-icon-prepare {
+    height: 32px;
+    width: 32px;
+  }
+
+  .process-card h3,
+  .process-card p {
+    margin-left: 22px;
+    margin-right: 22px;
   }
 
   .booking-card {

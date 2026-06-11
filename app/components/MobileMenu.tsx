@@ -79,7 +79,7 @@ export function MobileMenu({ navItems }: { navItems: NavItem[] }) {
             href="/#booking"
             onClick={() => setIsOpen(false)}
           >
-            Schedule a Mediation
+            Book
           </Link>
         </div>
       ) : null}
