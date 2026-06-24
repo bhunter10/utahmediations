@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FaStar } from "react-icons/fa6";
 import { SiteShell } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -87,12 +88,14 @@ const reviews = [
   },
 ];
 
+const fiveStars = Array.from({ length: 5 }, (_, index) => index);
+
 export default function ReviewsPage() {
   return (
     <SiteShell>
       <section className="page-hero compact-hero reviews-hero">
         <p className="eyebrow">Reviews</p>
-        <h1>Reviews for Dave Hunter.</h1>
+        <h1>What Clients and Attorneys Say.</h1>
         <p>
           Feedback from divorce, adoption, estate planning, and attorney
           mediation matters.
@@ -104,6 +107,11 @@ export default function ReviewsPage() {
           {reviews.map((review) => (
             <article className="review-card" key={`${review.title}-${review.name}`}>
               <h3>{review.title}</h3>
+              <div aria-label="5 star review" className="review-stars">
+                {fiveStars.map((star) => (
+                  <FaStar aria-hidden="true" key={star} />
+                ))}
+              </div>
               <blockquote>{review.quote}</blockquote>
               <footer>
                 <strong>{review.name}</strong>

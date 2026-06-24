@@ -25,7 +25,7 @@ export default function TrainingPage() {
       <section className="feature-section">
         <div className="section-heading">
           <p className="eyebrow">Video Library</p>
-          <h2>Training topics from Dave Hunter.</h2>
+          <h2>Training topics</h2>
         </div>
         <div className="training-list">
           {trainingItems.map((item) => (

@@ -6,6 +6,7 @@ const navItems: NavItem[] = [
   { href: "/about-dave", label: "About Dave" },
   { href: "/pricing", label: "Pricing" },
   { href: "https://utahqdro.com/", label: "QDROs", newTab: true },
+  { href: "/what-to-expect", label: "What to Expect" },
   { href: "/training", label: "Training" },
   { href: "/law", label: "Law" },
   { href: "/reviews", label: "Reviews" },
@@ -20,6 +21,7 @@ const desktopNavItems: NavItem[] = [
 ];
 
 const resourceNavItems: NavItem[] = [
+  { href: "/what-to-expect", label: "What to Expect" },
   { href: "https://utahqdro.com/", label: "QDROs", newTab: true },
   { href: "/training", label: "Training" },
   { href: "/law", label: "Law Blog" },

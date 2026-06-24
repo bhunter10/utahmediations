@@ -481,7 +481,7 @@ export default function BookingWidget() {
             <div className="booking-modal">
               <div className="booking-modal-header">
                 <div>
-                  <p className="eyebrow">Full-day mediation request</p>
+                  <p className="eyebrow">Mediation request</p>
                   <h3 id="booking-modal-title">Appointment Details</h3>
                 </div>
                 <button
